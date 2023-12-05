@@ -272,13 +272,10 @@ a:focus {
 	background-color: #27488a;
 }
 
-.xd-topbar {
-	width: 100%;
-	position: relative;
-}
+
 
 input[type="search"] {
-	background-color: #6081c5;
+	background-color: #c3d1ec;
 	color: #fff;
 	padding-left: 20px;
 	border: none;
@@ -291,12 +288,12 @@ input[type="search"] {
 
 
 .xp-searchbar .btn {
-	background-color: #6081c5;
+	background-color: #c3d1ec;
 	color: #fff;
 	font-weight: 600;
-	font-size: 16px;
+	font-size: 14px;
 	border-radius: 0 50px 50px 0;
-	padding: 4px 10px;
+	padding: 2px 5px;
 }
 
 
@@ -367,7 +364,9 @@ input[type="search"] {
 	transform: rotate(90deg);
 }
 
-
+.navbar-nav{
+margin-left: auto;
+}
 
 .icons {
 	background: #6081c5;
@@ -380,8 +379,6 @@ input[type="search"] {
 	padding: 0 7px;
 	justify-content: center;
 	text-decoration: none;
-	box-shadow: 4px 4px 8px -1px rgba(0, 0, 0, 0.15),
-		-4px -4px 8px -1px rgba(255, 255, 255, 0.7);
 	border: 1px solid rgba(0, 0, 0, 0);
 	transition: transform 0.5s;
 }
@@ -424,8 +421,12 @@ input[type="search"] {
 
 
 /**************************carousel**********************************/
+.slide-show {
+	height: 100vh;
+}
+
 .slide-show .carousel-item {
-	min-height: 80vh;
+	min-height: 100vh;
 	background-position: center;
 	background-size: cover;
 	position: relative;
@@ -578,117 +579,129 @@ h3 {
 
 /**************************End carousel**********************************/
 
+/* ************Marquee News********* */
 
+.scrolling-news{
+	display: flex;
+	align-items: center;
+	background: #d4d4d4;
+}
+.scrolling-news span{
+	position: relative;
+	display: inline-block;
+	flex-shrink: 0;
+	padding: 8px 15px;
+	background: #27488a;
+	color: #fff;
+	clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+.scrolling-news span a{
+	color: #fff;
+}
+
+/* ************End Marquee News********* */
 
 
 /************Chairman’s Message***************/
 .blockquote {
-	font-size: 1.1rem;
+	font-size: 1rem;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
 .engName {
 	font-weight: 800;
+	padding-right: 5px;
 }
 
 .titleChairman {
-	font-family: sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 	letter-spacing: 3px;
 }
 
 
 
 /***************Services*****************************/
-.big {
-	font-size: 10vw;
-	font-family: fantasy;
-	color: rgba(3, 5, 135, 0.2);
+
+.title h1{
+	text-align:center;
+	font-family: Arial, sans-serif;
+  	text-transform:uppercase;
+  	font-size:2em; 
+	font-weight: 600;
+	letter-spacing:1px;
+  	display: grid;
+  	grid-template-columns: 1fr auto 1fr;
+  	grid-template-rows: 16px 0;
+  	grid-gap: 22px;
 }
 
-.title {
-	font-size: 3vw;
-	font-family: cursive;
-	position: absolute;
-	left: 40%;
-	top: 40%;
-	letter-spacing: 4px;
-	color: #030587;
+.title h1:after,.title h1:before {
+  content: " ";
+  display: block;
+  border-bottom: 2px solid #ccc;
+  background-color:#f8f8f8;
 }
 
-.Box {
+
+.card-service{
 	position: relative;
-	height: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	height: 300px;
+	background: #fff;
 	border-radius: 20px;
-	box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+	transition: 0.5s;
 }
-
-.Box .imgBx {
-	position: relative;
-	width: 100%;
-	height: 100%;
+.card-service:hover{
+	height: 450px;
 }
-
-.Box .imgBx img {
+.card-service .img-service{
 	position: absolute;
-	border-radius: 20px;
+	top: 20px;
+	width:80%;
+	height: 220px;
+	background: #333;
+	border-radius: 12px;
+	overflow:hidden ;
+	transition: 0.5s;
+}
+.card-service:hover .img-service{
+	top: -100px;
+	scale: 0.75;
+	box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+.card-service .img-service img{
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	transition: 0.5s;
+	object-fit: fill;
 }
-
-.Box:hover .imgBx img {
-	opacity: 0;
-}
-
-.Box .contentBx {
+.card-service .content-serive{
 	position: absolute;
-	bottom: 20px;
-	left: 5%;
-	width: 80%;
-	height: 60px;
-	background: rgba(33, 73, 133, 0.918);
-	color: #fff;
-	transition: 0.05s;
-	border-radius: 20px;
-	overflow: hidden;
-	padding: 15px;
-	box-sizing: border-box;
-}
-
-.Box:hover .contentBx {
+	top: 240px;
 	width: 100%;
-	height: 100%;
-	bottom: 0;
-	left: 0;
-}
-
-.Box .contentBx h3 {
-	margin: 0;
-	padding: 0;
-	font-size: 20px;
+	height: 40px;
+	padding: 0 20px;
 	text-align: center;
-	font-family: Arial Black;
-	color: #fff;
-
-}
-
-.Box .contentBx p {
-	margin: 10px 0 0;
-	padding: 0;
-	opacity: 0;
-	line-height: 1.2em;
+	overflow: hidden;
 	transition: 0.5s;
 }
+.card-service:hover .content-serive{
+	top: 120px;
+	height: 350px;
+}
+.card-service .content-serive h3{
+	
+	font-weight: 600;
+    font-size: 17px;
+	color: #464545;
+	text-transform: uppercase;
+}
 
-.Box:hover .contentBx p {
-	opacity: 1;
-	transition-delay: 0.2s;
-}
-.btnApp{
-	color: #DBE5FD;
-}
 /***************End Services*****************************/
 
 
@@ -715,10 +728,16 @@ h3 {
 }
 
 .cardProBx .frontBx img {
-	position: absolute;
+	/* position: absolute;
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	object-fit: cover; */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
 }
 
 .cardProBx .frontBx h3 {
@@ -779,7 +798,7 @@ h3 {
 /***********************Counter up**************************/
 
 .counterup {
-	background-image: linear-gradient(to right bottom, rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.1)), url(../img/bg-project.jpg);
+	background-image: linear-gradient(to right bottom,  rgba(51, 51, 51,0.5),rgba(51, 51, 51,0.9)), url(../img/bg-project.jpg);
 	background-attachment: fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -795,7 +814,6 @@ h3 {
 .counter {
 	text-align: center;
 	color: #fff;
-	margin-left: 1%;
 }
 
 .counter .count {
@@ -808,14 +826,6 @@ h3 {
 	font-size: 1.4rem;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 400;
-}
-
-
-@media screen and (min-width:412px) {
-	.counter {
-		margin-left: 0px;
-		padding-bottom: 5px;
-	}
 }
 
 
@@ -887,11 +897,17 @@ h3 {
 }
 
 .card-site .img-site img {
-	position: absolute;
+	/* position: absolute;
 	margin-left: auto;
-	margin-right: auto;
+	margin-right: auto; 
 	display: block;
+	height: 100%; */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
 	height: 100%;
+	object-fit: fill;
 }
 
 .card-site .details-site {
@@ -907,18 +923,141 @@ h3 {
 	margin: 0;
 	padding: 0;
 	font-weight: 600;
-	font-size: 15px;
-	color: #777;
+    font-size: 17px;
+	color: #464545;
 	text-transform: uppercase;
 }
 
 
 
-/**********************/
-/*End Sites//*********************/
+/**********************||End Sites||*********************/
 
+/* ************Latest news ***********/
+.News{
+  	transition: all 500ms ease-in-out;
+ 	
+}
+.News:hover{
+	margin-top: 5px;
+  	box-shadow: 0px 12px 30px 0px rgba(0, 0, 0, 0.2);
+  	transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.News .card-body .card-date{
+	color: #898989;
+	font-size: 12px;
+	font-weight: 600;
+}
+.News .card-body p{
+	font-family: Arial, sans-serif ;
+	color: #333;
+	margin-bottom: 3px;
+	font-size: 16px;
+}
+.News .card-body .new-btn{
+	height: 40px;
+	line-height: 50px;
+}
 
+.News .card-body .new-btn{
+	color: #333;
+}
 
+.News .card-body .new-btn:hover a {
+	font-weight: 600;
+}
+.ALLnews-btn{
+	/* padding: 25px 30px; */
+	font-family: Arial, sans-serif;
+  	text-transform:uppercase;
+  	font-size:1em; 
+	font-weight: 600;
+	letter-spacing:1px;
+	transition: 0.5s;
+	overflow: hidden;
+
+}
+.ALLnews-btn:hover{
+	position: relative;
+	display: inline-block;
+	background: #03e9f4;
+	color: #fff;
+	box-shadow: 0 0 5px #03e9f4,
+				0 0 25px #03e9f4,
+				0 0 50px #03e9f4,
+				0 0 200px #03e9f4;
+}
+
+/* ************End Latest news *********** */
+
+/* ****************||Email Signup ||******************* */
+
+.email-signup{
+	
+	background-image: linear-gradient( rgba(0, 0, 0,0.5),rgba(0, 0, 0,0.8)), url(../img/email-signup.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 50vh;
+	padding: 65px;
+}
+.email-signup h3{
+	font-weight: 400;
+	color: #fff;
+	margin-bottom: 30px;
+	font-family: Arial, sans-serif;
+}
+.email-signup form{
+	background: #fff;
+	display: flex;
+	width: fit-content;
+	
+}
+.email-signup form input{
+	border: 0;
+	outline: none;
+	padding: 10px 20px;
+	height: 50px;
+	width: 400px;
+	font-size: 16px;
+}
+.email-signup .btn-email{
+	border: none;
+	outline: none;
+	height: 50px;
+	width: 100px;
+	cursor: pointer;
+	background-color: #27488a;
+	color: #fff;
+}
+@media(max-width:820px){
+	.email-signup{
+		height: 40vh;
+	}
+}
+@media(max-width:768px){
+	.email-signup form input{
+		width: 250px;
+		padding: 0;
+	}
+	.email-signup{
+		height: 40vh;
+	}
+}
+@media(max-width:414px) {
+	.email-signup form input{
+		width: 150px;
+		padding: 0;
+	}
+	.email-signup .btn-email{
+		width: 50px;
+	}
+	.email-signup h3{
+		font-weight: 200;
+		font-size: 15px;
+	}
+}
+/* ************||End Email Signup ||************* */
 
 
 
