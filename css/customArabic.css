@@ -2,7 +2,7 @@ body,
 html {
 	direction: rtl;
 	line-height: 1.8;
-	font-family: Arial, sans-serif;
+	font-family: 'Tajawal', sans-serif;
 	color: #555e58;
 	text-transform: capitalize;
 	font-weight: 400;
@@ -10,41 +10,54 @@ html {
 	padding: 0px;
 	scroll-behavior: auto;
 }
+body {
+	overflow-x: hidden;
+}
 
 :root {
 	--clr-neon: #04d9ff;
 }
 
-/*==========================================================
-  material-icon font-style
-  ================================*/
+.btn-outline-primary {
+    color: #27488a;
+    background-color: transparent;
+    background-image: none;
+    border-color: #7cc
+}
 
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #27488a;
+    border-color: #27488a
+}
 
-@font-face {
-	font-family: 'Material Icons';
-	font-style: normal;
-	font-weight: 400;
-	src: url(https://example.com/MaterialIcons-Regular.eot);
-	/* For IE6-8 */
-	src: local('Material Icons'),
-		local('MaterialIcons-Regular'),
-		url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
-		url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
-		url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+.btn-outline-primary:focus,
+.btn-outline-primary.focus {
+    box-shadow: 0 0 0 .2rem rgba(33, 2, 126, 0.5)
+}
+
+.btn-outline-primary.disabled,
+.btn-outline-primary:disabled {
+    color: #27488a;
+    background-color: transparent
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.show>.btn-outline-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #27488a;
+    border-color: #27488a
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+.btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+.show>.btn-outline-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 .2rem rgba(33, 2, 126, 0.5)
 }
 
 
 
-.material-icons {
-	font-family: 'Material Icons';
-	font-size: 15px;
-	/* Preferred icon size */
-	text-transform: none;
-}
-
-/*==========================================================
-  material-icon font-style end
-  ================================*/
 
 
 
@@ -58,7 +71,7 @@ h6,
 .h3,
 .h4 {
 	font-weight: 400;
-	line-height: 1.5em;
+	line-height: 1.2em;
 }
 
 p {
@@ -100,328 +113,57 @@ a:focus {
 	transition: all 0.3s;
 }
 
+/* ***************************** */
 
-.wrapper {
-	position: relative;
-	width: 100%;
-	overflow: auto;
-}
-
-/*=========sidebar---design------*/
-
-#sidebar {
-	position: fixed;
-	height: 100% !important;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 11;
-	width: 260px;
-	overflow: auto;
-	transition: all 0.3s;
-	background-color: #fff;
-	box-shadow: 0 0 30px 0 rgba(200 200 200 / 20%);
-}
-
-
-@media only screen and (min-width:992px) {
-	#sidebar.active {
-		right: -260px;
-		height: 100% !important;
-		position: absolute !important;
-		overflow: visible !important;
-		top: 0;
-		z-index: 666;
-		float: right !important;
-		bottom: 0 !important;
-	}
-
-	#content {
-		width: calc(100% - 260px);
-		position: relative;
-		float: left;
-		transition: all 0.3s;
-	}
-
-	#content.active {
-		width: 100%;
-	}
-
-}
-
-
-#sidebar::-webkit-scrollbar {
-	width: 5px;
-	border-radius: 10px;
-	background-color: #eee;
-	display: none;
-}
-
-#sidebar::-webkit-scrollbar-thumbs {
-	width: 5px;
-	border-radius: 10px;
-	background-color: #333;
-	display: none;
-}
-
-#sidebar:hover::-webkit-scrollbar-thumbs {
-	display: block;
-}
-
-#sidebar:hover::-webkit-scrollbar {
-	display: block;
-}
-
-#sidebar .sidebar-header {
-	padding: 20px;
-	background-color: #fff;
-	border-bottom: 1px solid #eee;
-}
-
-.sidebar-header h5 {
-	color: #333;
-	font-size: 12px;
-	margin: 0px;
-	text-transform: uppercase;
-	transition: all 0.5s ease;
-	font-weight: 600;
-}
-
-.sidebar-header h5 img {
-	width: 45px;
-	margin-right: 10px;
-}
-
-#sidebar ul li {
-	padding: 2px 0px;
-}
-
-#sidebar ul li.active>a {
-	color: #353B48;
-	background-color: #DBE5FD;
-	font-weight: 600;
-}
-
-
-#sidebar ul li.active>a i {
-	color: #353B48;
-	font-weight: 600;
-}
-
-
-
-#sidebar ul li a:hover {
-	color: #353B48;
-	background-color: #DBE5FD;
-	font-weight: 600;
-}
-
-
-.dropdown-toggle::after {
-	position: absolute;
-	left: 22px;
-	top: 18px;
-	color: #777777;
-}
-
-#sidebar ul li.dropdown {
-	position: sticky;
-}
-
-
-#sidebar ul.component {
-	padding: 20px 0px;
-}
-
-#sidebar ul li a {
-	padding: 5px 10px 5px 20px;
-	line-height: 30px;
-	font-size: 15px;
-	position: relative;
-	font-weight: 400;
-	display: block;
-	color: #777777;
-	text-transform: capitalize;
-}
-
-#sidebar ul li a i {
-	position: relative;
-	margin-left: 10px;
-	top: 6px;
-}
-
-
-/*=========sidebar---design- end-----*/
-
-
-/*========main-content- navbardesign -start-----*/
-
-#content {
-	position: relative;
-	transition: all 0.5s;
-	background-attachment: #f9fafc;
-}
-
-
-.top-navbar {
-	width: 100%;
-	z-index: 1030;
-	position: fixed;
-	top: 0;
-	right: 0;
-	left: 0;
-	background-color: #27488a;
-}
-
-
-
-input[type="search"] {
-	background-color: #c3d1ec;
-	color: #fff;
-	padding-right: 20px;
-	border: none;
-	border-radius: 50px 0px 0px 50px;
-}
-
-.input-group-append {
-	margin-right: -1px;
-}
-
-
-.xp-searchbar .btn {
-	background-color: #c3d1ec;
-	color: #fff;
-	font-weight: 600;
-	font-size: 14px;
-	/* border-radius: 0 50px 50px 0;
-	padding: 2px 5px; */
-}
-
-
-.xp-breadcrumbbar .page-title {
-	font-size: 20px;
-	color: #fff;
-	margin-bottom: 0;
-	margin-top: 0;
-}
-
-.breadcrumb {
-	display: inline-flex;
-	background-color: transparent;
-	margin: 0;
-	padding: 10px 0 0;
-}
-
-.breadcrumb .breadcrumb-item a {
-	color: #777777;
-}
-
-.breadcrumb-item.active {
-	color: #6c757d;
-}
-
-
-.breadcrumb-item+.breadcrumb-item {
-	padding-left: .5rem;
-}
-
-
-
-.navbar {
-	background-color: #27488a;
+/* *************************************************** */
+.top-bar{
+	background: #27488a;
 	color: #fff;
 }
-
-.navbar-brand {
-	color: #fff;
+#flags-icons{
+	float: left;
 }
-
-.navbar-nav{
-    margin-right: auto;
-}
-.navbar button {
-	background-color: transparent;
-	border: none;
-}
-
-.navbar button span {
-	color: #fff;
-}
-
-.xp-menubar {
-	border-radius: 50%;
-	width: 45px;
-	height: 45px;
-	line-height: 45px;
-	text-align: center;
-	margin-right: 20px;
-	border: none;
-	color: #fff;
-	cursor: pointer;
-	background-color: rgba(0, 0, 0, 0.09);
-}
-
-
-.xp-menubar span {
-	margin: 9px;
+.bg-nav-dark{
+	background: #27488a;
 	padding: 0px;
-	transform: rotate(90deg);
-}
-
-
-
-.icons {
-	background: #6081c5;
 	color: #fff;
+}
+.bg-nav-dark .nav-link{
+	color: #fff;
+}
+.bg-nav-dark .box-search{
+	background: #c1d1e9;
+    border: 1px solid #1c3f72;
+}
+.navbg{
+	padding: 0px;
+    background: #ededed;
+}
+.box-search{
 	height: 30px;
-	width: 30px;
-	margin: 0 5px;
-	border-radius: 8px;
+	display: flex;
+	cursor: pointer;
+	padding: 10px 15px;
+	border-radius: 25px;
 	align-items: center;
-	padding: 0 7px;
-	justify-content: center;
-	text-decoration: none;
-	border: 1px solid rgba(0, 0, 0, 0);
-	transition: transform 0.5s;
+	text-align: justify;
+    background: white;
+    border: 1px solid rgba(0,0,0,.55);}
+.box-search:hover input{
+width: 300px;
 }
-
-.icons a i {
-	transition: transfrom 0.5s;
-	color: #fff;
+.box-search input{
+	width: 0px;
+	outline: none;
+	border: none;
+	font-weight: 500;
+	transition: 0.8s;
+	background: transparent;
 }
-
-.icons:hover {
-	box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
-		inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
-		-0.5px -0.5px 0px rgba(255, 255, 255, 1),
-		0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
-		0px 12px 10px -10px rgba(0, 0, 0, 0.05);
-	border: 1px solid rgba(0, 0, 0, 0.01);
-	transform: translateY(2px);
+.box-search a .fa-search{
+	color: #27488a;
+	font-size: 15px;
 }
-
-.icons:hover i {
-	transform: scale(0.90);
-}
-
-.icons:hover .fa-facebook-official {
-	color: #3b5998;
-}
-
-.icons:hover .fa-whatsapp {
-	color: #25D366;
-}
-
-.icons:hover .fa-youtube-play {
-	color: #FF0000;
-}
-
-
-
-
-/*---navbardesign -end-----*/
-
-
 /**************************carousel**********************************/
 .slide-show {
 	height: 100vh;
@@ -533,11 +275,11 @@ h3 {
 	transform: scale(1.2);
 }
 .slide-show .carousel-control-prev{
-	left: -50px;
+	margin-right: -50px;
 }
 .slide-show .carousel-control-next{
-	right: -50px;
-}
+	margin-left:-50px
+} 
 .slide-show .carousel-control-next,
 .slide-show .carousel-control-prev {
 	height: 40px;
@@ -587,6 +329,8 @@ h3 {
 	display: flex;
 	align-items: center;
 	background: #d4d4d4;
+	line-height: 1;
+	border-radius: 5px;
 }
 .scrolling-news span{
 	position: relative;
@@ -596,6 +340,7 @@ h3 {
 	background: #27488a;
 	color: #fff;
     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+	border-radius: 5px;
 }
 .scrolling-news span a{
 	color: #fff;
@@ -607,7 +352,7 @@ h3 {
 /************Chairman’s Message***************/
 .blockquote {
 	font-size: 1rem;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Tajawal', sans-serif;
 }
 
 .engName {
@@ -616,8 +361,9 @@ h3 {
 }
 
 .titleChairman {
-	font-family: Arial, Helvetica, sans-serif;
-	letter-spacing: 3px;
+	font-family: 'Tajawal', sans-serif;
+	font-size: 1.3em;
+	font-weight: 700;
 }
 
 
@@ -626,7 +372,7 @@ h3 {
 
 .title h1{
 	text-align:center;
-	font-family: Arial, sans-serif;
+	font-family: 'Tajawal', sans-serif;
   	text-transform:uppercase;
   	font-size:2em; 
 	font-weight: 600;
@@ -637,11 +383,14 @@ h3 {
   	grid-gap: 22px;
 }
 
+.title h1 span{
+	margin-top: -5px;
+}
 .title h1:after,.title h1:before {
   content: " ";
   display: block;
-  border-bottom: 2px solid #ccc;
-  background-color:#f8f8f8;
+  border-bottom: 3px solid #ccc;
+  /* background-color:#f8f8f8; */
 }
 
 
@@ -657,7 +406,7 @@ h3 {
 	transition: 0.5s;
 }
 .card-service:hover{
-	height: 450px;
+	height: 370px;
 }
 .card-service .img-service{
 	position: absolute;
@@ -684,7 +433,7 @@ h3 {
 }
 .card-service .content-serive{
 	position: absolute;
-	top: 240px;
+	top: 265px;
 	width: 100%;
 	height: 40px;
 	padding: 0 20px;
@@ -712,6 +461,7 @@ h3 {
 
 .cardProBx {
 	height: 300px;
+	position: relative;
 }
 
 .cardProBx .face {
@@ -800,7 +550,7 @@ h3 {
 /***********************Counter up**************************/
 
 .counterup {
-	background-image: linear-gradient(to right bottom,  rgba(51, 51, 51,0.5),rgba(51, 51, 51,0.9)), url(../img/bg-project.jpg);
+	background-image: linear-gradient(to right bottom,  rgba(51, 51, 51,0.8),rgba(51, 51, 51,0.9)), url(../img/bg-project.jpg);
 	background-attachment: fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -826,7 +576,7 @@ h3 {
 
 .counter p {
 	font-size: 1.4rem;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Tajawal', sans-serif;
 	font-weight: 400;
 }
 
@@ -836,15 +586,7 @@ h3 {
 
 /***********************Sites*********************/
 
-.title2 {
-	font-size: 3vw;
-	font-family: cursive;
-	position: absolute;
-	left: 43%;
-	top: 40%;
-	letter-spacing: 4px;
-	color: #030587;
-}
+
 
 .card-site {
 	position: relative;
@@ -950,7 +692,7 @@ h3 {
 	font-weight: 600;
 }
 .News .card-body p{
-	font-family: Arial, sans-serif ;
+	font-family: 'Tajawal', sans-serif ;
 	color: #333;
 	margin-bottom: 3px;
 	font-size: 16px;
@@ -969,7 +711,7 @@ h3 {
 }
 .ALLnews-btn{
 	/* padding: 25px 30px; */
-	font-family: Arial, sans-serif;
+	font-family: 'Tajawal', sans-serif;
   	text-transform:uppercase;
   	font-size:1em; 
 	font-weight: 600;
@@ -1007,7 +749,7 @@ h3 {
 	font-weight: 400;
 	color: #fff;
 	margin-bottom: 30px;
-	font-family: Arial, sans-serif;
+	font-family: 'Tajawal', sans-serif;
 }
 .email-signup form{
 	background: #fff;
@@ -1141,7 +883,9 @@ h3 {
 	position: relative;
 	width: 100%;
 }
-
+.footer1{
+	text-align: right;
+}
 .socialwrapper {
 	display: inline-flex;
 	list-style: none;
@@ -1156,7 +900,7 @@ h3 {
 	margin: 10px;
 	width: 40px;
 	height: 40px;
-	font-size: 1.1rem;
+	/* font-size: 1.1rem; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -1230,41 +974,5 @@ h3 {
 
 
 
-#sidebar.show-nav,
-.body-overlay.show-nav {
-	transform: translatex(0%);
-	opacity: 1;
-	display: block;
-	visibility: visible;
-	z-index: 15;
-}
 
-/*========main-content- navbardesign -end-----*/
-@media only screen and (max-width:992px) {
-	#sidebar {
-        visibility: hidden;
-		position: fixed;
-		top: 0;
-		bottom: 0;
-		z-index: 10;
-		width: 260px;
-		transform: translatex(-100%);
-		transition: all 150ms linear;
-		box-shadow: none !important;
-        
-	}
 
-	.body-overlay {
-		position: fixed;
-		top: 0;
-		right: 0;
-		width: 100%;
-		height: 100%;
-		display: none;
-		visibility: hidden;
-		opacity: 0;
-		z-index: 3;
-		transition: all 150ms linear;
-		background-color: rgba(0, 0, 0, 0.5);
-	}
-}
