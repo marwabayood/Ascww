@@ -2,6 +2,7 @@ const englishData = {
     'Home': 'Home',
     'About': 'About',
     'AboutCompany': 'About Company',
+    'AboutComapny1':'About Company ',
     'DecisionEstablish': 'Decision to establish Company',
     'Branches': 'Branches',
     'Projects': 'Projects',
@@ -9,6 +10,7 @@ const englishData = {
     'Vision': 'Vision And Mission',
     'Organozational': 'Organozational Structure',
     'Achievements': 'Achievements',
+    'Contracts and Procurement':'Standard Contracts and Procurement Regulation',
     'Awareness': 'Awareness',
     'AwarenessMethod': 'Awareness Methodology',
     'Kids': 'Kids Corner',
@@ -55,10 +57,11 @@ const englishData = {
     'SportActivities': 'Sport activities',
     'marquee': 'Al-Sharqawi inspects the Al-Nazla Al-Kubra Candidate watching the training of technicians on occupational safety and health tasks in the chlorine ward',
     'Latest News': 'Latest News',
-    'ChairmanMessage': 'Chairman"s Message',
+    'ChairmanMessage': "Chairman's Message",
+    'message':"Water is the beating heart of life, and it is the basic component of everything that exists on the surface of the earth,in accordance with the words from Quran (We created from water every living thing وَجَعَلْنَا مِنَ الْمَاء كُلَّ شَيْءٍ حَيٍّ) If it were not for water, life would not exist, as its presence is the main reason for the existence of life, and one of God's blessings upon us is that He granted our beloved Egypt the great Nile River, which represents the lifeline. Which calls for the necessity of giving it great values that lie behind its true status, which requires preserving every drop of it, and denying all wrong uses and behaviors in dealing with it.",
     'message1': 'Water is the beating heart of life, and it is the basic component of everything that exists on the surface of the earth,in accordance with the words from Quran',
     'Quraan': '(We created from water every living thing وَجَعَلْنَا مِنَ الْمَاء كُلَّ شَيْءٍ حَيٍّ)',
-    'message2': 'If it were not for water, life would not exist, as its presence is the main reason for the existence of life, and one of God’s blessings upon us is that He granted our beloved Egypt the great Nile River, which represents the lifeline.',
+    'message2': "If it were not for water, life would not exist, as its presence is the main reason for the existence of life, and one of God's blessings upon us is that He granted our beloved Egypt the great Nile River, which represents the lifeline.",
     'message3': 'Which calls for the necessity of giving it great values that lie behind its true status, which requires preserving every drop of it, and denying all wrong uses and behaviors in dealing with it.',
     'EngName': 'Eng. Ali Abdul Rahman Al-Sharqawi',
     'service': 'Service',
@@ -78,13 +81,18 @@ const englishData = {
     'Lab': 'Lab',
     'Subscriber': 'Subscriber',
     'Drinking water Station': 'Drinking water Station',
-    'Waste water station': 'Waste water station'
-    , 'Sites': 'Sites',
+    'Waste water station': 'Waste water station',
+    'Sites': 'Sites',
+    'Sites2':'Sites',
     'Project': 'Project',
-    'Technical School': '',
+    'Technical-School': 'Technical School',
+    'Technical-School2':'Technical School',
     'Tenders': 'Tenders',
+    'Tenders2':'Tenders',
     'Customer Service': 'Customer Service',
+    'Customer Service2':'Customer Service',
     'Administration of Training': 'Administration of Training',
+    'Administration of Training2':'Administration of Training',
     'Subscribe to our newsletter to receive all new updates': 'Subscribe to our newsletter to receive all new updates',
     'LatestNews': 'Latest News',
     'title-slide1': 'Assuit And New Valley Company For Water And Waste Water',
@@ -106,14 +114,47 @@ const englishData = {
     'footer3.1':'More Info',
     'footer4.1':'TSCWW School',
     'footer4':'Headquarters of the Technical School for Water and waste water in Assiut and New Valley - New Assiut',
-    'copyright':'All rights reserved © 2024 to the Water and Wastewater Company in Assiut and New Valley'
-
+    'copyright':'All rights reserved © 2024 to the Water and Wastewater Company in Assiut and New Valley',
+    'listAbout1':'Decision to establish Company ',
+    'listAbout2':'Branches Comapny',
+    'listAbout3':'Projects Comapany',
+    'listAbout4':'News Archives',
+    'listAbout5':'Vision And Mission',
+    'listAbout6':'Organozational Structure',
+    'listAbout8':'Achievements',
+    'listAbout7':'Contracts and Procurement Regulation',
+    'DecisionCompany':'First: The Decision to establish the company',
+    'P-DecisionCompany':'Decision of the Minister of Housing and Utilities (No. 95 of 2008 licensing the establishment of an Egyptian joint-stock subsidiary for drinking water and sanitation in Assiut Governorate).',
+    'strategic goals':'Second: The strategic goals of the company',
+    'Operating efficiency':'Increasing the efficiency of operation and maintenance hubs.',
+    'Improving mechanisms':'Improving mechanisms for preserving water sources according to Egyptian standards.',
+    'Improving technical':'Improving the technical and administrative performance of laboratories to maintain the quality of drinking water and sewage treatment.',
+    'Raising efficiency of workers':'Raising the efficiency of workers technically and administratively using modern technologies',
+    'Verifying level of job':'  التحقق من مستوى الرضا الوظيفي الحالى للعاملين وتحسينه. ',
+    'Verifying level of job':'Verifying the current level of job satisfaction of employees and improving it.',
+    'transformation program':'Introducing a digital transformation program in the company to improve the level of service and provide electronic services in all branches and departments of the company.',
+    'leaders':'Company Leaders',
+    'followus':'Follow us',
+    'links':'Importaint Links',
+    'Ministry of Housing':'Ministry of Housing, Utilities & Urban Communities',
+    'EWRA':'EWRA',
+    'NOPWASD':'NOPWASD',
+    'HCWW':'Holding of water',
+    'GCWW':'Giza of water',
+    'CCWW':'Cairo of water',
+    'ACWW':'Alexandra of water',
+    'SCWW':'Sohag of water',
+    'QCWW':'Luxor of water',
+    'ASCWW':'Asswan of water',
+    'MCWW':'Minya of water',
+    'FCWW':'Fayoum of water'
 };
 
 const arabicData = {
     'Home': 'الرئيسيه',
     'About': 'عن الشركه',
-    'AboutCompany': 'نبذة عن الشركه',
+    'AboutCompany': ' نبذه عن الشركه',
+    'AboutComapny1':' عن الشـــركــة',
     'DecisionEstablish': 'قرار إنشاء الشركه',
     'Branches': 'فروع الشركه',
     'Projects': 'مشروعات الشركه',
@@ -121,6 +162,7 @@ const arabicData = {
     'Vision': 'الرؤيه والرساله',
     'Organozational': 'الهيكل التنظيمي',
     'Achievements': 'إنجازات الشركه',
+    'Contracts and Procurement':'اللائحه للعقود والمشتريات',
     'Awareness': 'التوعيه و الاتصال',
     'AwarenessMethod':'التوعيه و الاتصال',
     'Kids': 'ركن الاطفال',
@@ -192,11 +234,16 @@ const arabicData = {
     'Drinking water Station': ' محطات الشرب ',
     'Waste water station': ' محطات الصرف',
     'Sites': 'مواقعنا ',
+    'Sites2':'مواقعنا',
     'Project': 'مشروعتنا',
     'Technical-School': 'المدرسة الفنيه التابعه لمياه الشرب',
+    'Technical-School2':'المدرسة الفنيه التابعه لمياه الشرب',
     'Tenders': 'المناقصات',
+    'Tenders2':'المناقصات',
     'Customer Service': 'خـدمـة العـمـلاء',
+    'Customer Service2':'خـدمـة العـمـلاء',
     'Administration of Training': ' الإدارة العامه للتدريب',
+    'Administration of Training2':'الإدارة العامه للتدريب',
     'Subscribe to our newsletter to receive all new updates': 'اشترك في نشرتنا الإخبارية ليصلك كل جديد',
     'Latest News': 'أحدث الاخبار',
     'title-slide1': '   شركة مياه الشرب والصرف الصحي بأسيوط والوادي الجديد ',
@@ -218,7 +265,38 @@ const arabicData = {
     'footer3.1':'معلومات الشـــركــة',
     'footer4.1':'مدرسة الفنية ',
     'footer4':'مقـــر المدرسة الفنيه لمياه الشرب والصرف الصحي بأسيوط والوادي الجديد -أسيوط الجديدة',
-    'copyright':'جميع الحقوق محفوظة © لشركة مياه الشرب و الصرف الصحى بأسيوط و الوادى الجديد 2024 | الموقع من تطوير الإداره العامة لتكنولوجيا المعلومات بالشركة'
+    'copyright':'جميع الحقوق محفوظة © لشركة مياه الشرب و الصرف الصحى بأسيوط و الوادى الجديد 2024 | الموقع من تطوير الإداره العامة لتكنولوجيا المعلومات بالشركة',
+    'listAbout1':'قرار إنشاء الشركه',
+    'listAbout2':' فروع الشركه',
+    'listAbout3':'مشروعات الشركه',
+    'listAbout4':'أرشيف الشركه',
+    'listAbout5':'الرؤيه و الرساله',
+    'listAbout6':'الهيكل التنظيمي',
+    'listAbout8':'إنجازات الشركه',
+    'listAbout7':'اللائحه للعقود والمشتريات',
+    'DecisionCompany':'اولاً : قرار إنشاء الشركة',
+    'P-DecisionCompany':'قرار وزير الاسكان والمرافق ( رقم 95 لسنة 2008 بالترخيص لتأسيس شركة تابعة مساهمة مصرية لمياه الشرب والصرف الصحى لمحافظة أسيوط ) .',
+    'strategic goals':'ثانياً :- الأهداف الأستراتيجية للشركة',
+    'Operating efficiency':'رفع كفاءة محاور التشغيل والصيانه .',
+    'Improving mechanisms':' تحسين آليات المحافظة على مصادر المياه للمقاييس المصرية .',
+    'Improving technical':'  الإرتقاء بمستوى أداء المعامل فنياً وإدارياً للمحافظة على جودة مياه الشرب ومعالجة الصرف الصحي .    ',
+    'Raising efficiency of workers':' رفع كفاءة العاملين فنيا وإداريا بإستخدام التقنيات الحديث    ',
+    'transformation program':'إدخال برنامج التحول الرقمي في الشركة لتحسين مستوى الخدمة وتقديم الخدمات الإلكترونية في كافة فروع وإدارات الشركة .    ',
+    'leaders':'قيادات الشركة',
+    'followus':'تابعنا',
+    'links':'روابط مهمة',
+    'Ministry of Housing':'وزارة الاسكان والمجتمعات العمرانيه',
+    'EWRA':'جهاز تنظيم مياه الشرب والصرف الصحى وحماية المستهلك',
+    'NOPWASD':'الهيئة القوميه لمياه الشرب والصرف الصحي',
+    'HCWW':'الشركة القابضة لمياه الشرب والصرف الصحي',
+    'GCWW':'شركة مياه الشرب والصرف الصحى بالجيزة',
+    'CCWW':'شركة مياه الشرب و الصرف الصحى بالقاهرة الكبرى',
+    'ACWW':'شركة مياه الشرب و الصرف الصحى بالاسكندرية',
+    'SCWW':'شركة مياه الشرب والصرف الصحى بسوهاج',
+    'QCWW':'شركة مياه الشرب و الصرف الصحى بالأقصر ',
+    'ASCWW':'شركة مياه الشرب و الصرف الصحى بأسوان',
+    'MCWW':'شركة مياه الشرب والصرف الصحى بالمينا',
+    'FCWW':'شركة مياه الشرب والصرف الصحى بالفيوم'
 };
 
 $(function () {
@@ -247,6 +325,20 @@ $(function () {
             $("#emailSignup").attr('placeholder','أدخل بريدك الالكتروني');
             $("#emailSignup").css("direction","rtl");
 
+            // ================ About Page ================ //
+            $("#icon-hand1").addClass("fa-hand-o-left");
+            $("#icon-hand1").removeClass("fa-hand-o-right");
+            $("#icon-hand2").addClass("fa-hand-o-left");
+            $("#icon-hand2").removeClass("fa-hand-o-right");
+            $("#icon-hand3").addClass("fa-hand-o-left");
+            $("#icon-hand3").removeClass("fa-hand-o-right");
+            $("#icon-hand4").addClass("fa-hand-o-left");
+            $("#icon-hand4").removeClass("fa-hand-o-right");
+            $("#icon-hand5").addClass("fa-hand-o-left");
+            $("#icon-hand5").removeClass("fa-hand-o-right");
+            $("#icon-hand6").addClass("fa-hand-o-left");
+            $("#icon-hand6").removeClass("fa-hand-o-right");
+
         }else {
             Object.keys(englishData).forEach(function(key) {
                 el = document.querySelector('[key="' + key + '"]');
@@ -266,6 +358,20 @@ $(function () {
             $("#inputSearch").attr('placeholder','search ... ');
             $("#emailSignup").attr('placeholder','Your email id');
             $("#emailSignup").css("direction","ltr");
+
+            // ================ About Page ================ //
+            $("#icon-hand1").addClass("fa-hand-o-right");
+            $("#icon-hand1").removeClass("fa-hand-o-left");
+            $("#icon-hand2").addClass("fa-hand-o-right");
+            $("#icon-hand2").removeClass("fa-hand-o-left");
+            $("#icon-hand3").addClass("fa-hand-o-right");
+            $("#icon-hand3").removeClass("fa-hand-o-left");
+            $("#icon-hand4").addClass("fa-hand-o-right");
+            $("#icon-hand4").removeClass("fa-hand-o-left");
+            $("#icon-hand5").addClass("fa-hand-o-right");
+            $("#icon-hand5").removeClass("fa-hand-o-left");
+            $("#icon-hand6").addClass("fa-hand-o-right");
+            $("#icon-hand6").removeClass("fa-hand-o-left");
         }
     });
     

@@ -120,6 +120,9 @@ a:focus {
 	background: #27488a;
 	color: #fff;
 }
+#flags-icons button span{
+	color: #fff;
+}
 #flags-icons{
 	float: left;
 }
@@ -164,13 +167,25 @@ width: 300px;
 	color: #27488a;
 	font-size: 15px;
 }
+
+.navbar-light .navbar-toggler-icon{
+	background-image: none;
+	color: gray;
+	line-height: normal;
+	font-size: 20px;
+}
+@media screen and (max-width:1160px ) {
+	#ul-navbar{
+		font-size: 12px;
+	}
+}
 /**************************carousel**********************************/
 .slide-show {
-	height: 100vh;
+	height: 70vh;
 }
 
 .slide-show .carousel-item {
-	min-height: 100vh;
+	min-height: 70vh;
 	background-position: center;
 	background-size: cover;
 	position: relative;
@@ -374,7 +389,7 @@ h3 {
 	text-align:center;
 	font-family: 'Tajawal', sans-serif;
   	text-transform:uppercase;
-  	font-size:2em; 
+  	font-size:1.7em; 
 	font-weight: 600;
 	letter-spacing:1px;
   	display: grid;
@@ -435,7 +450,7 @@ h3 {
 	position: absolute;
 	top: 265px;
 	width: 100%;
-	height: 40px;
+	height: 35px;
 	padding: 0 20px;
 	text-align: center;
 	overflow: hidden;
@@ -672,7 +687,12 @@ h3 {
 	text-transform: uppercase;
 }
 
-
+/* .sm-sites{
+	visibility: hidden;
+} */
+.sm-sites img{
+	object-fit: fill;
+}
 
 /**********************||End Sites||*********************/
 
@@ -812,8 +832,8 @@ h3 {
 	position: fixed;
 	bottom: 20px;
 	right: 32px;
-	width: 50px;
-	height: 50px;
+	width: 35px;
+    height: 35px;
 	font-size: 32px;
 	justify-content: center;
 	/* color: #48597b; */
@@ -898,9 +918,8 @@ h3 {
 	border-radius: 50%;
 	padding: 15px;
 	margin: 10px;
-	width: 40px;
-	height: 40px;
-	/* font-size: 1.1rem; */
+	width: 30px;
+    height: 30px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -968,11 +987,104 @@ h3 {
 	background: #25D366;
 	color: #fff;
 }
-
-
 /*-------footer design end------*/
 
+/********************************************************************/
+/*************************** About Page *****************************/
+/********************************************************************/
 
+.titlePage{
+	background-image: linear-gradient( rgba(0, 0, 0,0.5),rgba(0, 0, 0,0.8)), url(../img/assuit3.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 40vh;
+	padding: 65px;
+}
+.titlePage h1{
+	font-size: 5em;
+	color: #dddddd;
+}
+		/* ============== */
+.listPage{
+	padding: 35px;
+	background: #fff;
+	box-shadow: 0 15px 26px rgba(122, 122, 122, 0.4);
+	border-radius: 12px;;
+	border-top: 5px solid rgba(107, 107, 107, 0.4);
+}
+.listPage li{
+	border-bottom: 1px solid gray;
+	margin: -1px 0;
+	transition: 0.5s;
+}
+.listPage li:hover{
+	transform: translate(25px);
+}
+.listPage li:hover a{
+	color:#27488a ;
+	font-weight: 700;
+}
+.listPage li a{
+	display: block;
+	/* border-right: 1px solid gray;  */
+	color: gray;
+	cursor: pointer;
+}
+.listPage li a span{
+	position: relative;
+	display: inline-block;
+}
+.listPage li a span:nth-child(1){
+	width: 30px;
+	text-align: center;
+	border-left: 1px solid gray;
+	border-right: 1px solid gray;
+	padding: 5px;
+	transition: 0.5s;
+	color: #262626;
+}
+.listPage li:hover a span:nth-child(1){
+	background: #27488a;
+	color: #fff;
+}
+.listPage li a span:nth-child(1) .fa{
+	transition: 0.5s;
+}
+.listPage li:hover a span:nth-child(1) .fa{
+	transform: rotate(360deg);
+}
+.listPage li a span:nth-child(2){
+	padding: 5px;
+}
+		/* ============== */
+.card-img-top-leader{
+	border-radius: 50%;
+	height: 150px;
+	width: 150px;
+	position: relative;
+    left: -35%;
+	top: -65px;
+	object-fit: cover;
+}
+.card-leader{
+	border-radius: 0;
+	cursor: pointer;
+	margin-top: 100px;
+}
+.card-leader:hover{
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
 
-
-
+	/* ================== */
+.txt-chairman{
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	padding: 30px;
+	color:rgba(0,0,0,.55);
+}
+	/* =================== */
+.swiper{
+	padding: 50px  !important;
+}
+	
