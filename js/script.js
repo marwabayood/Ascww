@@ -45,16 +45,23 @@ $(document).ready(function () {
 
   /***************End Count up********************** */
 
-  $("#arabic").trigger("click");  
+  $("#arabic").trigger("click");
+
+  // ******** MaxitUp ********* //
+var mixer = mixitup('.photos');
+mixer.filter('.Company-Labo');
+// ****** End MaxitUp ******* //
 
 });
 
 
+
 // =================About Page===============/
 
+if ($(".card-slider").length > 0) {
+
+
 var swiper = new Swiper(".card-slider", {
-  slidesPerView: 5,
-  spaceBetween: 30,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -72,9 +79,30 @@ var swiper = new Swiper(".card-slider", {
   pagination: {
     el: ".swiper-pagination",
   },
+
   mousewheel: true,
   keyboard: true,
+  breakpoints: {
+    300:{
+      slidesPerView: 2,
+    },
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 50,
+    },
+  },
 });
+
+}
+
 // ******************* Button top up ***********************//
 const toTop = document.querySelector(".to-top");
 window.onscroll = function () {

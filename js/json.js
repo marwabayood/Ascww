@@ -3,7 +3,6 @@ const englishData = {
     'About': 'About',
     'AboutCompany': 'About Company',
     'AboutComapny1':'About Company ',
-    'DecisionEstablish': 'Decision to establish Company',
     'Branches': 'Branches',
     'Projects': 'Projects',
     'Archives': 'News Archives',
@@ -47,6 +46,7 @@ const englishData = {
     'briefIntegritySupport': 'Brief about Integrity Support',
     'importantIntegritySupport': 'The most important work to Integrity Support',
     'FunctionalBehaviour': 'Functional behaviour',
+    'contact':'Contact us',
     'Photo': 'Photo Gallery',
     'ChairmanTour': 'Chairman of the board tours',
     'companyLabo': 'Company Laboratories',
@@ -115,7 +115,6 @@ const englishData = {
     'footer4.1':'TSCWW School',
     'footer4':'Headquarters of the Technical School for Water and waste water in Assiut and New Valley - New Assiut',
     'copyright':'All rights reserved © 2024 to the Water and Wastewater Company in Assiut and New Valley',
-    'listAbout1':'Decision to establish Company ',
     'listAbout2':'Branches Comapny',
     'listAbout3':'Projects Comapany',
     'listAbout4':'News Archives',
@@ -124,7 +123,6 @@ const englishData = {
     'listAbout8':'Achievements',
     'listAbout7':'Contracts and Procurement Regulation',
     'DecisionCompany':'First: The Decision to establish the company',
-    'P-DecisionCompany':'Decision of the Minister of Housing and Utilities (No. 95 of 2008 licensing the establishment of an Egyptian joint-stock subsidiary for drinking water and sanitation in Assiut Governorate).',
     'strategic goals':'Second: The strategic goals of the company',
     'Operating efficiency':'Increasing the efficiency of operation and maintenance hubs.',
     'Improving mechanisms':'Improving mechanisms for preserving water sources according to Egyptian standards.',
@@ -155,7 +153,6 @@ const arabicData = {
     'About': 'عن الشركه',
     'AboutCompany': ' نبذه عن الشركه',
     'AboutComapny1':' عن الشـــركــة',
-    'DecisionEstablish': 'قرار إنشاء الشركه',
     'Branches': 'فروع الشركه',
     'Projects': 'مشروعات الشركه',
     'Archives': 'أرشيف الشركه',
@@ -199,6 +196,7 @@ const arabicData = {
     'briefIntegritySupport': 'نبذه عن إداره دعم النزاهه',
     'importantIntegritySupport': 'أبرز أعمال دعم النزاهه',
     'FunctionalBehaviour': 'السلوك الوظيفي',
+    'contact':'أتصل بنا',
     'Photo': 'معرض الصور',
     'ChairmanTour': 'جولات رئيس مجلس الإداره',
     'companyLabo': 'معامل الشركه',
@@ -266,7 +264,6 @@ const arabicData = {
     'footer4.1':'مدرسة الفنية ',
     'footer4':'مقـــر المدرسة الفنيه لمياه الشرب والصرف الصحي بأسيوط والوادي الجديد -أسيوط الجديدة',
     'copyright':'جميع الحقوق محفوظة © لشركة مياه الشرب و الصرف الصحى بأسيوط و الوادى الجديد 2024 | الموقع من تطوير الإداره العامة لتكنولوجيا المعلومات بالشركة',
-    'listAbout1':'قرار إنشاء الشركه',
     'listAbout2':' فروع الشركه',
     'listAbout3':'مشروعات الشركه',
     'listAbout4':'أرشيف الشركه',
@@ -275,7 +272,6 @@ const arabicData = {
     'listAbout8':'إنجازات الشركه',
     'listAbout7':'اللائحه للعقود والمشتريات',
     'DecisionCompany':'اولاً : قرار إنشاء الشركة',
-    'P-DecisionCompany':'قرار وزير الاسكان والمرافق ( رقم 95 لسنة 2008 بالترخيص لتأسيس شركة تابعة مساهمة مصرية لمياه الشرب والصرف الصحى لمحافظة أسيوط ) .',
     'strategic goals':'ثانياً :- الأهداف الأستراتيجية للشركة',
     'Operating efficiency':'رفع كفاءة محاور التشغيل والصيانه .',
     'Improving mechanisms':' تحسين آليات المحافظة على مصادر المياه للمقاييس المصرية .',
@@ -304,7 +300,7 @@ $(function () {
         var lang = $(this).attr('id');
         var el;
         if(lang == "arabic"){
-            
+
             Object.keys(arabicData).forEach(function(key) {
                 el = document.querySelector('[key="' + key + '"]');
                 $(el).text(arabicData[key]);
@@ -312,7 +308,7 @@ $(function () {
 
             $("#arabic").hide();
             $("#english").show();
-           
+
             $("#marqueeNews").attr('direction','right');
             $("#arrowNews1").addClass("fa-arrow-circle-left");
             $("#arrowNews1").removeClass("fa-arrow-circle-right");
@@ -346,7 +342,7 @@ $(function () {
             });
             $("#arabic").show();
             $("#english").hide();
-           
+
             $("#marqueeNews").attr('direction','left');
             $("#arrowNews1").addClass("fa-arrow-circle-right");
             $("#arrowNews1").removeClass("fa-arrow-circle-left");
@@ -374,5 +370,5 @@ $(function () {
             $("#icon-hand6").removeClass("fa-hand-o-left");
         }
     });
-    
+
 });
